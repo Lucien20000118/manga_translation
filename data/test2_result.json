@@ -1,0 +1,113 @@
+{
+    "source": "test2.png",
+    "image_size": {
+        "width": 420,
+        "height": 620
+    },
+    "timestamp": "2026-06-25 09:12:47",
+    "models": {
+        "llm": "llama-3.1-8b-instant"
+    },
+    "text_boxes": [
+        {
+            "id": 1,
+            "coordinates": {
+                "x1": 281,
+                "y1": 262,
+                "x2": 367,
+                "y2": 374
+            },
+            "original_text": "それは時代と場所によるかな。",
+            "translated_text": "這是因為時代和地方不同。",
+            "safe_box": {
+                "x1": 296,
+                "y1": 281,
+                "x2": 352,
+                "y2": 355
+            },
+            "font_size": 7,
+            "font_color": "#1A1A1A",
+            "direction": "縱向呈現 (Vertical)"
+        },
+        {
+            "id": 2,
+            "coordinates": {
+                "x1": 0,
+                "y1": 0,
+                "x2": 131,
+                "y2": 159
+            },
+            "original_text": "小太護国やお山の内勝国なら博城や気品が必要。",
+            "translated_text": "如果是小太護國或是山地的內勝國，需要博學和氣度。",
+            "safe_box": {
+                "x1": 2.975767366720522,
+                "y1": 14.987075928917552,
+                "x2": 88.97576736672052,
+                "y2": 127.99515347334415
+            },
+            "font_size": 8,
+            "font_color": "#1A1A1A",
+            "direction": "縱向呈現 (Vertical)"
+        },
+        {
+            "id": 3,
+            "coordinates": {
+                "x1": 49,
+                "y1": 472,
+                "x2": 145,
+                "y2": 620
+            },
+            "original_text": "逆に常に魔族の角度にさらされているような地域ではあまり必要ないかな。",
+            "translated_text": "但是在常常被魔族攻擊的地區，可能就不需要了。",
+            "safe_box": {
+                "x1": 63.99676898222942,
+                "y1": 503.0048465266555,
+                "x2": 111.98061389337639,
+                "y2": 615.0274636510501
+            },
+            "font_size": 7,
+            "font_color": "#1A1A1A",
+            "direction": "縱向呈現 (Vertical)"
+        },
+        {
+            "id": 4,
+            "coordinates": {
+                "x1": 201,
+                "y1": 265,
+                "x2": 274,
+                "y2": 349
+            },
+            "original_text": "なぜですか？",
+            "translated_text": "為什麼？",
+            "safe_box": {
+                "x1": 217,
+                "y1": 281,
+                "x2": 259,
+                "y2": 333
+            },
+            "font_size": 7,
+            "font_color": "#1A1A1A",
+            "direction": "縱向呈現 (Vertical)"
+        },
+        {
+            "id": 5,
+            "coordinates": {
+                "x1": 292,
+                "y1": 523,
+                "x2": 359,
+                "y2": 620
+            },
+            "original_text": "平和だから。",
+            "translated_text": "因為那裡很平靜。",
+            "safe_box": {
+                "x1": 300.9919224555735,
+                "y1": 551.011308562197,
+                "x2": 340.9919224555735,
+                "y2": 613.011308562197
+            },
+            "font_size": 7,
+            "font_color": "#1A1A1A",
+            "direction": "縱向呈現 (Vertical)"
+        }
+    ]
+}

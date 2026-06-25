@@ -1,0 +1,16 @@
+# 1. 忽略環境變數檔 (最重要的！保護你的 API Key)
+.env
+
+# 2. 忽略日誌檔 (因為你有寫 app.log，避免日誌檔越來越大還被傳上雲端)
+*.log
+app.log
+
+# 3. 忽略 Python 執行時自動產生的暫存檔
+__pycache__/
+*.pyc
+*.pyo
+
+# 4. 如果你有使用 Python 虛擬環境，把虛擬環境資料夾也忽略
+.venv/
+
+local_models/

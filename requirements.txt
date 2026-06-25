@@ -1,0 +1,18 @@
+# --- GUI & 系統基礎環境 ---
+customtkinter>=5.2.0
+Pillow>=10.0.0
+opencv-python>=4.8.0
+numpy>=1.24.0
+python-dotenv>=1.0.0
+
+# --- AI 翻譯 API ---
+groq>=0.9.0
+
+# --- 深度學習與模型推論 (YOLO & MobileSAM) ---
+torch>=2.0.0
+torchvision>=0.15.0
+ultralytics>=8.0.0
+
+# --- 漫畫對話框分割模型 (MobileSAM 依賴) ---
+# 註：MobileSAM 官方通常需要直接從 GitHub 儲存庫安裝
+# 您可以在終端機執行：pip install git+https://github.com/ChaoningZhang/MobileSAM.git
