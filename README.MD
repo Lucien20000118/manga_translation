@@ -74,7 +74,7 @@ python app.py
 作為一款為生產力設計的工具，本專案在工程實作上解決了以下挑戰：
 
 * **狀態機徹底分離 (State Machine Decoupling)**：
-在 page_adjust.py 中實作了嚴格的 Inspector Lock。當未選取文字框時，所有編輯工具（文字、大小、顏色）會強制鎖定 (Disabled) 並套用系統級安全預設值，徹底解決了舊版 UI 的「幽靈狀態 (Ghost State)」與潛在的 Type Crash (如錯誤解析 #ZZZZZZ)。
+在 page_adjust.py 中實作了嚴格的 Inspector Lock。當未選取文字框時，所有編輯工具（文字、大小、顏色）會強制鎖定 (Disabled) 並套用系統級安全預設值，
 
 * **非同步與執行緒安全**：
 在 page_translate.py 的批次翻譯過程中使用 threading.Thread 進行背景處理，並透過 after(0, ...) 將 UI 更新推回主執行緒，確保介面不卡頓。
