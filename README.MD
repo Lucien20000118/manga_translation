@@ -17,14 +17,14 @@ Comic Translator 是一個基於 Python 與 CustomTkinter 開發的自動化漫�
 * **自動化翻譯管線**：
     * **文字定位**：使用 YOLO 模型精準框選對話框與文字區域。
     * **文字辨識 (OCR)**：整合 MOCR 提取日文/外文內容。
-    * **智慧翻譯**：串接 Groq API (LLM)，提供具備上下文感知與口語化的翻譯結果。
+    * **智慧翻譯**：串接 Groq API (LLM)，提供具備口語化的翻譯結果。
 * **精確影像處理與排版 (Typesetting)**：
     * **對話框分割**：利用 MobileSAM (Vision Transformer Tiny) 提取精確的對話框遮罩 (Mask)，並計算最佳「安全內接矩形」，避免文字溢出。
     * **智慧文字渲染**：支援中文字元自動換行、垂直/水平排版，並根據邊界框 (Bounding Box) 動態計算行距與字體大小。
 * **現代化 GUI 介面**：
     * 基於 `customtkinter` 打造的深色模式 UI，具備側邊欄導航。
     * **翻譯介面**：支援模型動態載入、批次處理資料夾內的圖片，並具備進度回報機制 (Progress callback)。
-    * **調整與檢查介面**：提供強大的畫布操作 (縮放、裁切)，並具備**屬性檢查器鎖定機制 (Inspector Lock)**，確保狀態機獨立，避免 UI 幽靈狀態與型別錯誤。
+    * **調整與檢查介面**：提供畫布操作 (縮放、裁切)，並具備**屬性檢查器鎖定機制 (Inspector Lock)**，確保狀態機獨立，避免 UI 幽靈狀態與型別錯誤。
 
 ## 🏗️ 系統架構 (Architecture)
 
@@ -80,9 +80,9 @@ python app.py
 在 page_translate.py 的批次翻譯過程中使用 threading.Thread 進行背景處理，並透過 after(0, ...) 將 UI 更新推回主執行緒，確保介面不卡頓。
 
 * **精準的視覺運算**：
-image_processor.py 結合了物件偵測 (Bounding Box) 與影像分割 (Semantic Masking)。透過 OpenCV 的 findNonZero 與 boundingRect 搭配內縮比例參數 (scale=0.7)，在不規則對話框中找出最完美的矩形排版空間。
+image_processor.py 結合了物件偵測 (Bounding Box) 與影像分割 (Semantic Masking)。透過 OpenCV 的 findNonZero 與 boundingRect 搭配內縮比例參數 (scale=0.7)，在不規則對話框中找出矩形排版空間。
 
 ## 貢獻與除錯 (Contributing & Debugging)
-* **資料持久化**：翻譯結果與文字框座標會序列化並儲存於 data/ 目錄下的 .json 檔案中，方便後續中斷恢復或手動除錯。
+* **資料保存**：翻譯結果與文字框座標會序列化並儲存於 data/ 目錄下的 .json 檔案中，方便後續中斷恢復或手動除錯。
 
-* **日誌系統**：日誌 (Log) 系統已透過 Callback 注入到 GUI 控制台中，開發時可直接在 UI 上檢視 Backend 的錯誤拋出。
+* **日誌系統**：日誌 (Log) 系統可直接在 UI 上檢視錯誤。
